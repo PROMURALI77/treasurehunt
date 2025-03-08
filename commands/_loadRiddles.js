@@ -16,10 +16,10 @@
   group: 
 CMD*/
 
-var riddle = ["TR", "EA", "SU", "RE", "HU", "NT"]
+var riddle = []
 
-Bot.setProperty("riddles",riddle,"json")
+//Bot.setProperty("riddles",riddle,"json")
 
-var prop = Bot.getProperty("riddles")
+//var prop = Bot.getProperty("riddles")
 
-Bot.sendMessage(prop[0])
+//Bot.sendMessage(prop[0])
