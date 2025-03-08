@@ -62,3 +62,5 @@ var riddle = [
 ]
 
 Bot.setProperty("globalRiddle",riddle,"json")
+
+Bot.sendMessage("Riddles Updated & Uploaded ✅ ")
