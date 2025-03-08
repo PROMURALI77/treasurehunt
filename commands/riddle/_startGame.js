@@ -1,9 +1,9 @@
 /*CMD
-  command: /start
+  command: /startGame
   help: 
   need_reply: false
   auto_retry_time: 
-  folder: 
+  folder: riddle
 
   <<ANSWER
 
@@ -16,6 +16,6 @@
   group: 
 CMD*/
 
-Bot.sendMessage("welcome messge") // welcome msg here
+var quizQuestion = User.getProp("userRiddle")
 
-Bot.runCommand("/gamerules")
+Bot.sendMessage()

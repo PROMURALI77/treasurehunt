@@ -3,7 +3,7 @@
   help: 
   need_reply: false
   auto_retry_time: 
-  folder: 
+  folder: admin
 
   <<ANSWER
 
@@ -61,6 +61,6 @@ var riddle = [
     }
 ]
 
-Bot.setProperty("globalRiddle",riddle,"json")
+Bot.setProp("globalRiddle",riddle,"json")
 
 Bot.sendMessage("Riddles Updated & Uploaded ✅ ")

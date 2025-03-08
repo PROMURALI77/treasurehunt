@@ -1,9 +1,9 @@
 /*CMD
-  command: /start
+  command: /startconfirm
   help: 
   need_reply: false
   auto_retry_time: 
-  folder: 
+  folder: game
 
   <<ANSWER
 
@@ -16,6 +16,4 @@
   group: 
 CMD*/
 
-Bot.sendMessage("welcome messge") // welcome msg here
-
-Bot.runCommand("/gamerules")
+Bot.sendKeyboard("START GAME ▶","**Get Ready & Click Below To Start The Game ⬇**")
