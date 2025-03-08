@@ -21,8 +21,8 @@ Bot.sendMessage("welcome messge") // welcome msg here
 
 var getRiddle = Bot.getProperty("globalRiddle")
 
-var myRiddle = {
-  }
-User.setProp()
+var myRiddle = getRiddle[0]
+Bot.sendMessage(myRiddle)
+//User.setProp()
 
-Bot.runCommand("Game")
+//Bot.runCommand("Game")
