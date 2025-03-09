@@ -4,16 +4,9 @@
   need_reply: false
   auto_retry_time: 
   folder: game
-
-  <<ANSWER
-
-  ANSWER
-
-  <<KEYBOARD
-
-  KEYBOARD
+  answer: Get Ready & Click Below To Start The Game ⬇
+  keyboard: START GAME ▶
   aliases: 
   group: 
 CMD*/
 
-Bot.sendKeyboard("START GAME ▶","**Get Ready & Click Below To Start The Game ⬇**")
