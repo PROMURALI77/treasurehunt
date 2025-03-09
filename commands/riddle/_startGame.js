@@ -12,10 +12,14 @@
   <<KEYBOARD
 
   KEYBOARD
-  aliases: 
+  aliases: start game ▶
   group: 
 CMD*/
 
-var quizQuestion = User.getProp("userRiddle")
+var userQuiz = User.getProp("userQuiz")
 
-Bot.sendMessage()
+var newQuiz = userQuiz.pop()
+User.setProp("riddleQT", newQuiz, "string")
+Bot.sendKeyboard("");
+Bot.runCommand("/quizQuestion")
+
