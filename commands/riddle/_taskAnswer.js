@@ -16,21 +16,30 @@
   group: 
 CMD*/
 
-var taskAnswer = User.getProp("userTaskAnswer")
-var newTask = User.getProp("userTask")
-var Answer = taskAnswer.pop()
 var comptQ = User.getProp("compRiddle")
-var newQuiz = User.getProp("userQuiz")
-if ( message.toLowerCase() == Answer.toLowerCase() ) {
-    Bot.sendMessage("Correct Answer")
-    User.setProp("userTaskAnswer",taskAnswer,"json")
-    newTask.pop()
-    User.setProp("userTask",newTask,"json")
-    User.setProp("compRiddle",Number(comptQ) + 1,"integer")
-    User.setProp("riddleQT",newQuiz.pop(),"string")
-    Bot.runCommand("/quizQuestion")
+var len = comptQ.length
+if (len == 10) {
+  Bot.runCommand("/finalRiddle")
 } else {
-Bot.sendMessage("wrong answer ❌ ")
-Bot.runCommand("/taskQuestion")
+  var taskAnswer = User.getProp("userTaskAnswer")
+  var newTask = User.getProp("userTask")
+  var Answer = taskAnswer.pop()
 
+  var newQuiz = User.getProp("userQuiz")
+
+
+  if (message.toLowerCase() == Answer.toLowerCase()) {
+    Bot.sendMessage("Correct Answer")
+    User.setProp("userTaskAnswer", taskAnswer, "json")
+    newTask.pop()
+    User.setProp("userTask", newTask, "json")
+    comptQ.push("1")
+    User.setProp("compRiddle", comptQ, "json")
+    User.setProp("riddleQT", newQuiz.pop(), "string")
+    Bot.runCommand("/quizQuestion")
+  } else {
+    Bot.sendMessage("wrong answer ❌ ")
+    Bot.runCommand("/taskQuestion")
+  }
 }
+
