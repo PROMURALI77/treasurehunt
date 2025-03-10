@@ -17,5 +17,5 @@
 CMD*/
 
 Bot.sendMessage("welcome messge") // welcome msg here
-
+Bot.sendMessage("this bot was developed my @promurali")
 Bot.runCommand("/gamerules")

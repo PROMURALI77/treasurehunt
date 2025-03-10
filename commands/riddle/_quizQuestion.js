@@ -16,10 +16,14 @@
   group: 
 CMD*/
 
-var currentQuiz = User.getProp("riddleQT")
 var comptQ = User.getProp("compRiddle")
-if (comptQ.length == 10 ) {
+var len = comptQ.length
+if (len  == 11 ) {
   Bot.runCommand("/finalRiddle")
   } 
+var currentQuiz = User.getProp("riddleQT")
+
+
+
 Bot.sendMessage(currentQuiz)
 Bot.runCommand("/quizAnswer")
