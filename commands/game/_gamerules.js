@@ -27,7 +27,7 @@ User.setProp("userQuiz", myRiddle.quiz, "json")                   // setting qui
 User.setProp("userQuizAnswer", myRiddle.quizAnswer, "json")       // setting quiz answer to user in db
 User.setProp("userTask", myRiddle.task, "json")                   // setting task to user in db
 User.setProp("userTaskAnswer", myRiddle.taskAnswer, "json")       // setting task answer to user in db
-var compRiddle = []
+var compRiddle = [0]
 User.setProp("compRiddle",compRiddle, "json")
 
 Bot.sendInlineKeyboard(
